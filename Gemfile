@@ -7,7 +7,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'kind-rb', path: '~/workspace/getkuby/kind-rb'
   gem 'kuby-core'
   gem 'pry-byebug'
   gem 'rake'

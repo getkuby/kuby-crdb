@@ -1,4 +1,5 @@
 require 'kuby'
+require 'kuby/crdb/version'
 
 module Kuby
   module CRDB

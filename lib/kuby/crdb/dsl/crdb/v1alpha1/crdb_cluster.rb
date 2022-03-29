@@ -1,12 +1,12 @@
 module Kuby::CRDB::DSL::CRDB::V1alpha1
   class CrdbCluster < ::KubeDSL::DSLObject
-    key_value_field(:status, format: :string)
-    key_value_field(:spec, format: :string)
+    object_field(:status) { Kuby::CRDB::DSL::CRDB::V1alpha1::Status.new }
+    object_field(:spec) { Kuby::CRDB::DSL::CRDB::V1alpha1::Spec.new }
     value_field :api_version
     object_field(:metadata) { KubeDSL::DSL::Meta::V1::ObjectMeta.new }
 
-    validates :status, kv: { value_format: :string }, presence: true
-    validates :spec, kv: { value_format: :string }, presence: true
+    validates :status, object: { kind_of: Kuby::CRDB::DSL::CRDB::V1alpha1::Status }
+    validates :spec, object: { kind_of: Kuby::CRDB::DSL::CRDB::V1alpha1::Spec }
     validates :api_version, field: { format: :string }, presence: false
     validates :metadata, object: { kind_of: KubeDSL::DSL::Meta::V1::ObjectMeta }
 

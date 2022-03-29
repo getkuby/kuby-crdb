@@ -114,7 +114,6 @@ task :codegen do
   require 'fileutils'
 
   # delete anything that should be re-generated
-  FileUtils.rm_rf('./lib/kuby/crdb/entrypoint.rb')
   FileUtils.rm_rf('./lib/kuby/crdb/dsl.rb')
   FileUtils.rm_rf('./lib/kuby/crdb/dsl')
   FileUtils.mkdir_p('./lib/kuby/crdb/dsl')
@@ -149,7 +148,6 @@ task :codegen do
 
   generator.generate_resource_files
   generator.generate_autoload_files
-  generator.generate_entrypoint_file
 
   FileUtils.rm_rf(File.join('lib', 'kuby.rb'))
 end

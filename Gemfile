@@ -7,7 +7,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'kube-dsl', path: '../kube-dsl'
+  gem 'kube-dsl'
   gem 'kuby-core', path: '../kuby-core'
   gem 'kuby-kind'
   gem 'pry-byebug'

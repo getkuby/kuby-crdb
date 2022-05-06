@@ -2,6 +2,7 @@ require 'bundler'
 require 'rspec/core/rake_task'
 require 'rubygems/package_task'
 
+require 'sorbet-runtime'
 require 'kuby/crdb'
 require 'pry-byebug'
 
@@ -138,11 +139,17 @@ task :codegen do
       ['KubeDSL', 'DSL'],
       builder.inflector,
       builder.schema_dir,
-      builder.autoload_prefix
+      builder.autoload_prefix,
+      builder.serialize_handlers
     )
 
     ns = external_ref.ruby_namespace + [external_ref.kind]
-    exists = ns.inject(Object) { |mod, n| mod.const_get(n, false) } rescue false
+    exists = begin
+      ns.inject(Object) { |mod, n| mod.const_get(n, false) }
+      true
+    rescue => e
+      false
+    end
     exists ? external_ref : builder.parse_ref(ref_str)
   end
 

@@ -12,10 +12,8 @@ Gem::Specification.new do |s|
 
   s.platform = Gem::Platform::RUBY
 
-  s.add_dependency 'kube-dsl', '>= 0.6.1', '< 1.0'
-
-  s.add_development_dependency 'kind-rb', '~> 0.1'
+  s.add_dependency 'kube-dsl', '~> 0.7'
 
   s.require_path = 'lib'
-  s.files = Dir['{lib,spec}/**/*', 'Gemfile', 'LICENSE', 'CHANGELOG.md', 'README.md', 'Rakefile', 'kuby-crdb.gemspec']
+  s.files = Dir['{lib,spec,rbi}/**/*', 'Gemfile', 'LICENSE', 'CHANGELOG.md', 'README.md', 'Rakefile', 'kuby-crdb.gemspec']
 end

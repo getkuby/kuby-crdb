@@ -87,8 +87,10 @@ module Kuby
 
       def operator_ready?
         depl = operator_deployment
+        return false unless depl
+
         rs = find_operator_rs(depl)
-        return false unless depl && rs
+        return false unless rs
 
         observed_generation = depl.dig('status', 'observedGeneration')
         current_generation = depl.dig('metadata', 'generation')

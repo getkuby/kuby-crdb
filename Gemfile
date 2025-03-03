@@ -16,7 +16,7 @@ group :development, :test do
   gem 'sorbet'
   gem 'sorbet-runtime'
   gem 'tapioca', '~> 0.7'
-  gem 'parlour', github: 'camertron/parlour', branch: 'initialize_void'
+  gem 'parlour', '~> 9.0'
 end
 
 group :test do

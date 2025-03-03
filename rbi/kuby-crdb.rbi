@@ -397,6 +397,24 @@ module Kuby
             def key(val = nil); end
           end
 
+          class CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def match_labels(&block); end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions]) }
+            def match_expressions(elem_name = nil, &block); end
+          end
+
           class CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm < ::KubeDSL::DSLObject
             include KubeDSL::ValueFields::InstanceMethods
             extend KubeDSL::ValueFields::ClassMethods
@@ -419,6 +437,27 @@ module Kuby
 
             sig { params(val: T.nilable(String)).returns(String) }
             def topology_key(val = nil); end
+          end
+
+          class CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def operator(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def values(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def key(val = nil); end
           end
 
           class CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector < ::KubeDSL::DSLObject
@@ -458,6 +497,45 @@ module Kuby
 
             sig { params(val: T.nilable(Integer)).returns(Integer) }
             def weight(val = nil); end
+          end
+
+          class CrdbClusterSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def match_labels(&block); end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions]) }
+            def match_expressions(elem_name = nil, &block); end
+          end
+
+          class CrdbClusterSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def operator(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def values(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def key(val = nil); end
           end
 
           class CrdbClusterSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions < ::KubeDSL::DSLObject
@@ -539,6 +617,45 @@ module Kuby
 
             sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution]) }
             def preferred_during_scheduling_ignored_during_executions(elem_name = nil, &block); end
+          end
+
+          class CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def operator(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def values(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def key(val = nil); end
+          end
+
+          class CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def match_labels(&block); end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions]) }
+            def match_expressions(elem_name = nil, &block); end
           end
 
           class CrdbClusterSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector < ::KubeDSL::DSLObject
@@ -625,6 +742,27 @@ module Kuby
             def weight(val = nil); end
           end
 
+          class CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def operator(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def values(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def key(val = nil); end
+          end
+
           class CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector < ::KubeDSL::DSLObject
             include KubeDSL::ValueFields::InstanceMethods
             extend KubeDSL::ValueFields::ClassMethods
@@ -640,6 +778,24 @@ module Kuby
             def match_labels(&block); end
 
             sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions]) }
+            def match_expressions(elem_name = nil, &block); end
+          end
+
+          class CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def match_labels(&block); end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions]) }
             def match_expressions(elem_name = nil, &block); end
           end
 
@@ -916,6 +1072,114 @@ module Kuby
             def pull_secret(val = nil); end
           end
 
+          class CrdbClusterSpecIngress < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecIngressUi) }
+            def ui; end
+
+            sig { returns(T::Boolean) }
+            def ui_present?; end
+
+            sig { returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecIngressSql) }
+            def sql; end
+
+            sig { returns(T::Boolean) }
+            def sql_present?; end
+          end
+
+          class CrdbClusterSpecIngressSql < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecIngressSqlTls))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecIngressSqlTls]) }
+            def tls(elem_name = nil, &block); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def host(val = nil); end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def annotations(&block); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def ingress_class_name(val = nil); end
+          end
+
+          class CrdbClusterSpecIngressSqlTls < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def hosts(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def secret_name(val = nil); end
+          end
+
+          class CrdbClusterSpecIngressUi < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecIngressUiTls))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecIngressUiTls]) }
+            def tls(elem_name = nil, &block); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def host(val = nil); end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def annotations(&block); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def ingress_class_name(val = nil); end
+          end
+
+          class CrdbClusterSpecIngressUiTls < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def hosts(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def secret_name(val = nil); end
+          end
+
           class CrdbClusterSpecPodEnvVariables < ::KubeDSL::DSLObject
             include KubeDSL::ValueFields::InstanceMethods
             extend KubeDSL::ValueFields::ClassMethods
@@ -1094,6 +1358,72 @@ module Kuby
 
             sig { params(val: T.nilable(String)).returns(String) }
             def effect(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def key(val = nil); end
+          end
+
+          class CrdbClusterSpecTopologySpreadConstraints < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def when_unsatisfiable(val = nil); end
+
+            sig { params(val: T.nilable(Integer)).returns(Integer) }
+            def max_skew(val = nil); end
+
+            sig { returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecTopologySpreadConstraintsLabelSelector) }
+            def label_selector; end
+
+            sig { returns(T::Boolean) }
+            def label_selector_present?; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def topology_key(val = nil); end
+          end
+
+          class CrdbClusterSpecTopologySpreadConstraintsLabelSelector < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(block: T.nilable(T.proc.void)).returns(::KubeDSL::KeyValueFields) }
+            def match_labels(&block); end
+
+            sig { params(elem_name: T.nilable(Symbol), block: T.nilable(T.proc.returns(Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecTopologySpreadConstraintsLabelSelectorMatchExpressions))).returns(T::Array[Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecTopologySpreadConstraintsLabelSelectorMatchExpressions]) }
+            def match_expressions(elem_name = nil, &block); end
+          end
+
+          class CrdbClusterSpecTopologySpreadConstraintsLabelSelectorMatchExpressions < ::KubeDSL::DSLObject
+            include KubeDSL::ValueFields::InstanceMethods
+            extend KubeDSL::ValueFields::ClassMethods
+            extend KubeDSL::Validations::ClassMethods
+
+            sig { returns(T::Hash[Symbol, T.any(String, Integer, Float, T::Boolean, T::Array[T.untyped], T::Hash[Symbol, T.untyped])]) }
+            def serialize; end
+
+            sig { returns(Symbol) }
+            def kind_sym; end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def operator(val = nil); end
+
+            sig { params(val: T.nilable(String)).returns(String) }
+            def values(val = nil); end
 
             sig { params(val: T.nilable(String)).returns(String) }
             def key(val = nil); end

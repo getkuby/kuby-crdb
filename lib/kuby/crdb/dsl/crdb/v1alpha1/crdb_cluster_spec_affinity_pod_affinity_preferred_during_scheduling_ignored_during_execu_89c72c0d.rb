@@ -6,16 +6,19 @@ module Kuby
       module CRDB
         module V1alpha1
           class CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm < ::KubeDSL::DSLObject
+            object_field(:namespace_selector) { Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector.new }
             object_field(:label_selector) { Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector.new }
             value_field :namespaces
             value_field :topology_key
 
+            validates :namespace_selector, object: { kind_of: Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector }
             validates :label_selector, object: { kind_of: Kuby::CRDB::DSL::CRDB::V1alpha1::CrdbClusterSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector }
             validates :namespaces, field: { format: :string }, presence: false
             validates :topology_key, field: { format: :string }, presence: true
 
             def serialize
               {}.tap do |result|
+                result[:namespaceSelector] = namespace_selector.serialize
                 result[:labelSelector] = label_selector.serialize
                 result[:namespaces] = namespaces
                 result[:topologyKey] = topology_key
